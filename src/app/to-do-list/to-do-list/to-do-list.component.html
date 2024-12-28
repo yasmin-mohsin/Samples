@@ -16,40 +16,41 @@
       <div class="input-group mb-3">
         <button class="btn search-bar rounded-5 " type="button" id="button-addon1"><i class="fa fa-search"
             aria-hidden="true" (click)="filterTaskList(searchValue)"></i></button>
-        <input type="text" class="form-control search-bar rounded-5 w-25" ((change))="filterTaskList(searchValue)"
-          [(ngModel)]="searchValue">
+        <input type="text" class="form-control search-bar rounded-5 w-25" [(ngModel)]="searchValue">
       </div>
       <button class="btn btn-primary add" (click)="openDialog()"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </div>
   </div>
   <!-- container for display task list -->
   <ng-container *ngFor="let item of taskList;let index= index">
-    <div class="card w-75 mx-auto p-2"
-      [ngClass]="item.priorityID==3?'high-priority':(item.priorityID==2?'normal-priority':'low-priority')">
-      <div class="card-header">
-        <div class="form-check">
-          <div class="row">
-            <div class="col-10">
-              <input class="form-check-input" type="checkbox" id="autoSizingCheck2" [value]="item?.flag">
-              <label class="form-check-label" for="autoSizingCheck2">
-                {{item?.taskName}}
-              </label>
-            </div>
-            <div class="col-1" (click)="deleteTask(item?.id,index)">
-              <i class="fa fa-trash" aria-hidden="true"></i>
-            </div>
-            <div class="col-1" (click)="item.showDescription=!item.showDescription">
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
+    <ng-container *ngIf="item?.show">
+      <div class="card w-75 mx-auto p-2"
+        [ngClass]="item.priorityID==3?'high-priority':(item.priorityID==2?'normal-priority':'low-priority')">
+        <div class="card-header">
+          <div class="form-check">
+            <div class="row">
+              <div class="col-10">
+                <input class="form-check-input" type="checkbox" id="autoSizingCheck2" [value]="item?.flag">
+                <label class="form-check-label" for="autoSizingCheck2">
+                  {{item?.taskName}}
+                </label>
+              </div>
+              <div class="col-1" (click)="deleteTask(item?.id,index)">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </div>
+              <div class="col-1" (click)="item.showDescription=!item.showDescription">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </div>
+        <!-- description for task -->
+        <ng-container *ngIf="item?.showDescription">
+          <div class="card-body">
+            <p>{{item?.description}}</p>
+          </div>
+        </ng-container>
       </div>
-      <!-- description for task -->
-      <ng-container *ngIf="item?.showDescription">
-        <div class="card-body">
-          <p>{{item?.description}}</p>
-        </div>
-      </ng-container>
-    </div>
+    </ng-container>
   </ng-container>
 </ng-container>
