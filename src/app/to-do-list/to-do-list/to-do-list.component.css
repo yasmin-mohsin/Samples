@@ -1,0 +1,43 @@
+.low-priority {
+    border-bottom-width: 15px;
+    border-bottom-color: darkgrey;
+}
+
+.normal-priority {
+    border-bottom-width: 15px;
+    border-bottom-color: rgb(23, 227, 37);
+}
+
+.high-priority {
+    border-bottom-width: 15px;
+    border-bottom-color: rgb(158, 7, 7);
+}
+
+.add {
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 67%;
+    width: 100px;
+    background-color: #FF7F67;
+    border-color: #FF7F67;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #FFE0D8;
+    font-family: cursive;
+}
+
+.add:hover {
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 67%;
+    width: 100px;
+    background-color: #FF7F67;
+    border-color: #FF7F67;
+
+}
+.search-bar{
+    background-color: #F4F4F4;
+}

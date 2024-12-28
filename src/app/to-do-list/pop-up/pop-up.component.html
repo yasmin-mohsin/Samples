@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Add new Task</h1>
+<div mat-dialog-content>
+    <form [formGroup]="addTaskForm" (submit)="addNewTask()">
+
+        <!-- title section -->
+        <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput type="text" formControlName="title">
+
+        </mat-form-field>
+
+        <!-- description section -->
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input type="text" matInput formControlName="description">
+        </mat-form-field>
+
+        <!-- date section -->
+        <mat-form-field>
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" [min]="date" [disabled]="true">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker [disabled]="false"></mat-datepicker>
+        </mat-form-field>
+
+        <!-- priorirt section -->
+        <mat-form-field>
+            <mat-label>priority</mat-label>
+            <mat-select formControlName="priority">
+                <ng-container *ngFor="let priority of priorities" >
+                    <mat-option [value]="priority?.id">{{priority?.name}}</mat-option>
+                </ng-container>
+            </mat-select>
+            <input>
+        </mat-form-field>
+        <div mat-dialog-actions>
+            <button mat-button>Add</button>
+            <button mat-button (click)="onCancel()">Cancel</button>
+        </div>
+    </form>
+</div>
