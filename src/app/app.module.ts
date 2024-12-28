@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { HttpClientModule } from '@angular/common/http'
-
-// import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire';
-// import { environment } from 'src/environments/environment';
-// import { AngularFireDatabaseModule } from '@angular/fire/database'
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './shopping/home/home.component';
+import { CategoryComponent } from './shopping/category/category.component';
+import { ProductComponent } from './shopping/product/product.component';
+import { BasketComponent } from './shopping/basket/basket.component'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CategoryComponent,
+    ProductComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
@@ -23,8 +27,6 @@ import { HttpClientModule } from '@angular/common/http'
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    // AngularFireModule.initializeApp(environment.firebase),
-    // AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
