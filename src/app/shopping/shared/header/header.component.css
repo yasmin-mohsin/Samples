@@ -1,0 +1,36 @@
+@font-face {
+    font-family: UnifrakturMaguntia-Regular;
+    src: url(../../../../assets/Fonts/UnifrakturMaguntia-Regular.ttf);
+}
+
+.header {
+    background-image: linear-gradient(180deg, #f39af0e0, #ffffff00);
+
+    div {
+        margin-bottom: 20px;
+    }
+}
+
+.logo-name {
+    font-family: UnifrakturMaguntia-Regular;
+    font-size: 55px;
+    color: #512A2B;
+}
+
+.logo-img {
+    height: 100px;
+    margin: 12px;
+}
+
+ul {
+    font-family: cursive;
+    font-size: 25px;
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+
+        color: #512A2B;
+    }
+}
