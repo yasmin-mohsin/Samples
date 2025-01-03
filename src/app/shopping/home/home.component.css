@@ -1,0 +1,45 @@
+@font-face {
+    font-family: Bonbon-Regular;
+    src: url(../../../assets/Fonts/Bonbon/Bonbon-Regular.ttf);
+}
+
+.category-title {
+    display: inline;
+    color: #512A2B;
+    font-size: xx-large;
+    font-family: Bonbon-Regular;
+    font-weight: bold;
+    font-size: 80px;
+    margin-left: 315px;
+}
+
+.card {
+    background-color: #6dfaf92e;
+}
+
+.card-title {
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: 600;
+    font-variant: all-petite-caps;
+    text-decoration: underline;
+    text-decoration-color: #512A2B;
+    color: #512A2B;
+}
+
+.cart-btn {
+    background-color: #f0f8ff00;
+    border: none;
+    font-size: 30px;
+    color: #2954dce0;
+}
+
+.col-1 {
+    font-size: 18px;
+    font-weight: 900;
+    font-family: cursive;
+    text-decoration: underline;
+    a{
+        color: #512A2B;
+    }
+}

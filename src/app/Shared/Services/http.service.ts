@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// import { AngularFireDatabase } from '@angular/fire/compat/database';
-// import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
@@ -25,12 +23,5 @@ export class HttpService {
   }
   delete(id: any, path: any) {
     return this.http.delete(`${this.URL}${path}/${id}.json`)
-    // this.db.object(`/${path}/${id}`).remove().then(() => {
-    //   console.log('Item deleted successfully');
-    // })
-    //   .catch((error: any) => {
-    //     console.error('Error deleting item:', error);
-    //   });
-    // return this.DB.object(this.URL + path + '/' + id + '.json').remove()
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpService } from 'src/app/Shared/Services/http.service';
 
 @Component({
   selector: 'app-product',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private rout: ActivatedRoute, private http: HttpService) {
+      rout.queryParams.subscribe(res => {
+        console.log(res)
+      });
+    }
 
   ngOnInit(): void {
   }

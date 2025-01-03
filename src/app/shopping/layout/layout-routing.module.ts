@@ -10,10 +10,7 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: 'home', component: HomeComponent },
-      { path: 'category/face', component: CategoryComponent },
-      { path: 'category/body', component: CategoryComponent },
-      { path: 'category/hair', component: CategoryComponent },
-      { path: 'category/kids', component: CategoryComponent },
+      { path: 'category', component: CategoryComponent },
       { path: 'product', component: ProductComponent },
       { path: 'basket', component: BasketComponent },
     ]

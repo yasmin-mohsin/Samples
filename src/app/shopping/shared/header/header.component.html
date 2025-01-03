@@ -5,7 +5,7 @@
             alt="">
         <div class="logo-name">Cosmo</div>
     </div>
-    <ul class="nav nav-tabs justify-content-center">
+    <ul class="nav nav-tabs justify-content-center border-0">
         <li class="nav-item">
             <a class="nav-link " aria-current="page" routerLink="home">Home</a>
         </li>
@@ -13,10 +13,10 @@
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                 aria-expanded="false">Categories</a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" routerLink="category/{{'face'}}">Face</a></li>
-                <li><a class="dropdown-item" routerLink="category/{{'hair'}}">Hair</a></li>
-                <li><a class="dropdown-item" routerLink="category/{{'body'}}">Body</a></li>
-                <li><a class="dropdown-item" routerLink="category/{{'kids'}}">Kids</a></li>
+                <li><a class="dropdown-item" routerLink="category" [queryParams]="{type:'Face'}">Face</a></li>
+                <li><a class="dropdown-item" routerLink="category" [queryParams]="{type:'Hair'}">Hair</a></li>
+                <li><a class="dropdown-item" routerLink="category" [queryParams]="{type:'Body'}">Body</a></li>
+                <li><a class="dropdown-item" routerLink="category" [queryParams]="{type:'Kids'}">Kids</a></li>
             </ul>
         </li>
         <li class="nav-item">

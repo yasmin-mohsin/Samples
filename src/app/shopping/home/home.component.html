@@ -1,1 +1,28 @@
-<p>home works!</p>
+<ng-container *ngFor="let category of landingData">
+    <div class="mb-5 mt-5">
+        <p class="category-title"><i class="fa fa-angle-double-right" aria-hidden="true"></i></p>
+        <p class="category-title">{{category[0]}}</p>
+        <p class="category-title"><i class="fa fa-angle-double-left" aria-hidden="true"></i></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ng-container *ngFor="let item of category[1].slice(0,3);let index=index ">
+                <div class="col-xl text-center" routerLink="/product" [queryParams]="{index:index}">
+                    <div class="card" style="width: 18rem;">
+                        <img [src]="item?.image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{item?.productName}}</h5>
+                            <p class="card-text">{{item?.description}}</p>
+                            <a (click)="addToCart(item)" class="btn btn-primary cart-btn"><i
+                                    class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="col-1 align-self-center text-center">
+                <a class="" routerLink="/category" [queryParams]="{type:category[0]}">See All <i
+                        class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</ng-container>
