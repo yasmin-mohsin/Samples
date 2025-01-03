@@ -7,9 +7,9 @@
     <div class="container">
         <div class="row">
             <ng-container *ngFor="let item of category[1].slice(0,3);let index=index ">
-                <div class="col-xl text-center" routerLink="/product" [queryParams]="{index:index}">
+                <div class="col-xl text-center">
                     <div class="card" style="width: 18rem;">
-                        <img [src]="item?.image" class="card-img-top" alt="...">
+                        <img [src]="item?.image" class="card-img-top" alt="..." routerLink="/product" [queryParams]="{index:index}">
                         <div class="card-body">
                             <h5 class="card-title">{{item?.productName}}</h5>
                             <p class="card-text">{{item?.description}}</p>

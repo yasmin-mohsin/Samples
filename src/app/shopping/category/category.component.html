@@ -1,3 +1,17 @@
-<ng-container *ngFor="let product of products;let index=index">
-
-</ng-container>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let product of products;let index=index">
+            <div class="col-xl p-3 text-center">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="product?.image" class="card-img-top" alt="..." routerLink="/product" [queryParams]="{index:index}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{product?.productName}}</h5>
+                        <p class="card-text">{{product?.description}}</p>
+                        <a (click)="addToCart(product)" class="btn btn-primary cart-btn"><i
+                                class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
