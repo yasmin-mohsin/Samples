@@ -3,7 +3,8 @@
         <ng-container *ngFor="let product of products;let index=index">
             <div class="col-xl p-3 text-center">
                 <div class="card" style="width: 18rem;">
-                    <img [src]="product?.image" class="card-img-top" alt="..." routerLink="/product" [queryParams]="{index:index}">
+                    <img [src]="product?.image" class="card-img-top" alt="..." routerLink="/product"
+                        [queryParams]="{index:index,type:categoryType}">
                     <div class="card-body">
                         <h5 class="card-title">{{product?.productName}}</h5>
                         <p class="card-text">{{product?.description}}</p>

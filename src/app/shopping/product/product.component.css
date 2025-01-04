@@ -1,0 +1,33 @@
+.container {
+    background-color: #71c6db;
+    border-radius: 30px;
+}
+
+.row {
+    background-color: #205A68;
+    border-radius: 40px;
+}
+
+.product-name {
+    display: ruby-text;
+    font-size: calc(1vw + 60px);
+    font-family: cursive;
+    font-weight: 600;
+    color: #bcf4f2;
+}
+.product-price{
+    font-size: calc(1vw + 25px);
+    font-family: 'UnifrakturMaguntia-Regular';
+    color: #000000;
+}
+.product-desc{
+    font-size: calc(1vw + 10px);
+    display: ruby-text;
+    font-family: sans-serif;
+    color: black;
+}
+.add-to-cart{
+    border-radius: 13px;
+    background-color: #010717;
+    color: #d3f2ef;
+}

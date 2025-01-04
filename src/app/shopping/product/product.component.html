@@ -1,1 +1,21 @@
-<p>product works!</p>
+<div class="container p-2">
+    <div class="row p-3">
+        <div class="col p-4">
+            <div class="product-name">
+                <p>{{productData?.productName}}</p>
+            </div>
+            <div class="product-price">
+                <p><span>-</span>{{productData?.price}}</p>
+            </div>
+            <div class="product-desc">
+                <p><span>-</span>{{productData?.description}}</p>
+            </div>
+            <div class="">
+                <button class="add-to-cart btn btn-lg" (click)="addToCart()">Add to cart</button>
+            </div>
+        </div>
+        <div class="col text-center p-2">
+            <img [src]="productData?.image" alt="" class="rounded mx-auto d-block">
+        </div>
+    </div>
+</div>
